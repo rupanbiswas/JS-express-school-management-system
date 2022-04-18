@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "4d0acd49-373f-4037-8386-2a8fcc761659",
+		"name": "practical",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone_number\":7908988242,\r\n    \"password\":\"R1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/V1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"V1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCourses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/V1/get-courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"V1",
+						"get-courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enrollcourse",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMmUjEyMzQ1NjciLCJpYXQiOjE2NTAzMTQ2NDMsImV4cCI6MTY1MjkwNjY0M30.gCNcRkCzjuFVN2NxKpWkTIGDZQT2830SYuAdair2gY8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"course_id\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/V1/enroll-course",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"V1",
+						"enroll-course"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewEnrollment",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEmUjEyMzQ1NiIsImlhdCI6MTY1MDMxMjM3NywiZXhwIjoxNjUyOTA0Mzc3fQ.xLb1zXHBbeTIRvozuh_3QhGpXacrgi7-GZHc_EwaE0o",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/V1/view-enrollment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"V1",
+						"view-enrollment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editEnrollment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEmUjEyMzQ1NiIsImlhdCI6MTY1MDMxMjM3NywiZXhwIjoxNjUyOTA0Mzc3fQ.xLb1zXHBbeTIRvozuh_3QhGpXacrgi7-GZHc_EwaE0o",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":2,\r\n    \"course_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/V1/edit-enrollment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"V1",
+						"edit-enrollment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
